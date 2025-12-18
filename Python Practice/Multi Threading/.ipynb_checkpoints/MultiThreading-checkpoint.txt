@@ -1,0 +1,17 @@
+Thread is the smallest unit of processing
+By default the thread runs on a single processors
+if we wanna run multiple threads at the same time then thats called multi threading
+Multiple threads runs concurrently not parallaly --- that basically means only one thread executes at a particular instance of time 
+
+
+MultiThreading
+     1. since it happens under a single processor threads share memory space and resources within the process 
+     2. concurrent
+     3. it is best for applications that need to use same data or resources
+     ex: downloading / managing multiple tabs on the browser
+
+Multiprocessing
+    1. since it happens with multiple processors each process has its own memory space and also resources are isolated from one another
+    2. truly parallel
+    3. it is best for tasks that can run independently
+    ex: server handling multiple requests

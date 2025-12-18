@@ -1,0 +1,54 @@
+ML is all about learning patterns from the data.
+patterns are basically mathematical functions
+and those functions are performed on numerical data 
+but the raw data can consist of both Catergorical and numerical data so we use data encoding
+___________________________________________________________________________________________
+Data Encoding:
+    Converting the string data to numerical data
+    types:
+        -nominal
+        -label and ordinal
+        -target guided ordinal encoding
+___________________________________________________________________________________________
+Nominal / OHE 
+    - conversion of categorical data into numerical data
+    - Here no order is present in the data
+    eg: status
+        ------
+        single 
+        married
+        separated 
+we cant say that single is better than married or married is better than single . i.e naturally we dont have an order for this data
+
+here we use matrix like way to get the numerical data we want
+
+            single   married   separated ----- these are the cols we created and they are called dummy variables
+single       1        0         0
+married      0        1         0
+separated    0        0         1
+
+dis ad: the col might have 100s of different values we cant create that many new cols ... curse of dimentionality
+
+-> for n no of distinct variables in a col , n no of dummy variables will be created , in that one col is repeated so n-1 unique dummy variables
+_________________________________________________________________________________________________________________________________________________
+Label and ordinal encoding
+    - Label encoding assigns numerical data to each category
+    eg: green -1 / red -2 / pink -3
+
+disad : good for ordinal data but for nominal data it learns the pattern
+
+ordinal encoding ... it assigns the numerical data to each category based on a particular order
+    eg: school -1/ inter -2/ btech -3/ masters -4
+_______________________________________________________________________________________________________________----
+target guided ordinal encoding
+    -based on their relationship with the target variable
+    -useful when we have large no of categories in categorical data 
+    - categorical groups with mean/median of the target variable
+
+eg: time | total bill( target var )
+   450lunch      500
+    breakfast  700
+    dinner     1000
+    dinner      900
+    lunch       400
+now the lunch is replaced by the avg/mean value of the total bill lets say mean of lunch = 450 then lunch is replaced by 450

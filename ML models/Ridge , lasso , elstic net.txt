@@ -1,0 +1,103 @@
+Ridge, Lasso, and Elastic Net Regression
+Why we need them
+
+Linear models can overfit when:
+
+there are many features
+
+features are correlated
+
+model learns noise
+
+Regularization solves this by adding a penalty to large weights.
+
+Ridge Regression (L2 Regularization)
+
+Definition:
+Ridge regression adds a penalty equal to the square of the coefficients.
+
+What it does:
+
+Shrinks coefficients toward zero
+
+Does not make coefficients exactly zero
+
+Keeps all features in the model
+
+When to use:
+
+All features are important
+
+Features are highly correlated
+
+Multicollinearity exists
+
+Key point:
+Ridge reduces model complexity but does not perform feature selection.
+
+Lasso Regression (L1 Regularization)
+
+Definition:
+Lasso regression adds a penalty equal to the absolute value of the coefficients.
+
+What it does:
+
+Shrinks coefficients
+
+Can make some coefficients exactly zero
+
+Performs feature selection
+
+When to use:
+
+Many features but only a few are important
+
+You want a simpler, interpretable model
+
+Key point:
+Lasso can completely remove irrelevant features.
+
+Elastic Net Regression
+
+Definition:
+Elastic Net combines L1 (Lasso) and L2 (Ridge) penalties.
+
+What it does:
+
+Some coefficients become zero
+
+Others are shrunk but kept
+
+Handles correlated features better than Lasso
+
+When to use:
+
+Dataset has many correlated features
+
+Lasso is too aggressive
+
+Ridge is not selective enough
+
+Comparison Table
+Model	Penalty Type	Sets weights to zero	Best use case
+Ridge	L2	No	All features matter
+Lasso	L1	Yes	Feature selection
+Elastic Net	L1 + L2	Yes (some)	Correlated features
+Important Note
+
+Feature scaling is mandatory before using Ridge, Lasso, or Elastic Net.
+
+sklearn Example (reference)
+from sklearn.linear_model import Ridge, Lasso, ElasticNet
+
+Ridge(alpha=1.0)
+Lasso(alpha=0.1)
+ElasticNet(alpha=1.0, l1_ratio=0.5)
+
+One-line summary
+
+Ridge: shrinks coefficients
+
+Lasso: removes features
+
+Elastic Net: shrink + remove

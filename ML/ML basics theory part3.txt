@@ -1,0 +1,53 @@
+lets say we have a data where the dependent var/target var has only 2 outcomes
+eg: diabetic or not
+person | diabetic
+a      | 0
+b      | 1
+c      | 0
+d      | 0
+e      | 1
+f      | 0
+here 0 means not diabetic and 1 means diabetic
+if 90% of the data of target var is 0 and other 10% is 1 and it gives 90% accuracy even if dont use any ML model and thats a problem called class imbalace.
+___________________________________________________________________________________________________________________
+class imbalance:
+    - one class has higher percentage compared to other class
+    - we dont want out data to learn only the majority pattern so we need to deal with class imbalance
+    - we consider there is a class imbalance when its 80 -20/above 80- remaining stuff
+
+Solutions to class imbalance
+a) under sampling/down sampling
+b) over sampling/up sampling
+c) SMOTE
+------------------------------------------------
+a) under sampling/down sampling
+
+lets say class A has 100 rows and class B has 900 rows.... we bring the size of class B to class A by selecting 100 random rows
+disad:
+    -loss of data
+------------------------------------------------
+a) over sampling/up sampling
+
+lets say class A has 100 rows and class B has 900 rows.... we bring the size of class A to class B by repeating the class A to the size of class B(100x9)
+disad:
+    -no pattern cause data is just repeating continously
+    -noise
+------------------------------------------------
+c) SMOTE -(synthetic minority over sampling technique)
+How SMOTE Works:
+Select a Minority Class Instance: SMOTE begins by randomly selecting a data point from the minority class.
+
+Find K Nearest Neighbors:         It then identifies the k nearest neighbors of this selected instance, also from the minority class. The number k is a                                            configurable parameter.
+Generate Synthetic Samples:       For each selected minority class instance, and for each of its k nearest neighbors, SMOTE generates new synthetic samples.                                        -This is done by:
+                                        * Calculating the difference between the selected instance and one of its randomly chosen neighbors.
+                                        * Multiplying this difference by a random number between 0 and 1. 
+                                        * Adding the result to the original selected instance. This creates a new synthetic data point along the line segment                                              connecting the original point and its neighbor.
+
+Repeat: This process is repeated until the desired balance between the minority and majority classes is achieved.
+_________________________________________________________________________________________________________________________________________________________
+In industry we handle the class imbalance in the following way
+lets say the classes are to the ratio 900 :100
+we reduce the 900 to 600 using under sampling 
+and then we increase the 100 to 400 using smote
+
+600:400 is an acceptable balance between the classes

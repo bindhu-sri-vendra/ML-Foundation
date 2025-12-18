@@ -1,0 +1,49 @@
+
+1. understanding the problem statement 
+2. read the data / data ingestion
+3. Data preparation
+    - missing value treatments
+    - class imbalance
+    - outlier treatment
+    - data encoding
+    - feature engineering / feature extraction
+___________________________________________________________-
+                          feature engineering
+                    /                 |                \
+ creating new features  modifying existing features   selecting the right features
+__________________________________________________________________
+
+feature extraction .... selecting and extracting relevant features from the raw data
+eg: price of the house depends on area of house (f1), no of rooms(f2) but it doesn't depend of gender of the buyer(not relevant feature)
+
+we need to select the right and relevant features for our ml model ... why? ... because
+
+1. curse of dimensionality .... with increase in no of features model training can be computationaly expensive
+                                model interpretations become complex
+_____________________________________________________________________
+1. creating a new feature
+dist | time | speed =dist/time .. new feature using dist and time
+----------------------------------------
+2. modifying existing features
+age     ->>>  age 
+23 years      23
+25 years      25
+we converted the string age to integer age
+
+eg-2 we can convert date to respective year day and month
+2002-05-28 to 2002  05  28
+
+b) feature scaling (optional) ..... it tries to bring all the features on a same scale
+1800|5|50|300 -- to all same scale like in 10's for all cols
+
+ad 
+- optimization becomes faster
+- interpretation becomes easy
+----------------------------------------
+3. selecting the right feature
+ a) filter method .. calculate covariance with target variable
+
+corr(gender,price of house)
+corr(area,price of house) ... this will have more correlation value that's how we choose this col
+ b) embedded method
+ c) wrapper method

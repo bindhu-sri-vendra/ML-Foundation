@@ -1,0 +1,26 @@
+CRISP - cross industry standard process for data mining -- used to solve any problem statement using ML models
+
+
+5 steps:
+- data ingestion
+- exploratory data analysis
+- data preparations / feature engineering
+- model building
+- model evaluation
+
+EDA ... (we use it to gain insights from the data)
+- profile of data ... no of cols/rows/datatype/duplicates
+- statistical based analysis ... five point summary/outlier correction/covariance
+-Graphical based analysis ... scatter plt/heatmap/boxplot/pairplt
+
+once we understand the data well 
+- we select relevant features
+- convert into numerical values
+_____________________________________________________________________
+EDA
+1. univariate analysis
+        - we analyze one feature at a time ( displot )
+2. bivariate analysis
+        - we analyze two features at a time ( scatter plot )
+3. mulitvariate analysis
+        - we analyze multiple features at a time ( heatmap/pairplot )

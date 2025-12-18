@@ -1,0 +1,25 @@
+Regularization >> to add something[error] to reduce overfitting
+
+lets say best fit line passes through the data points perfectly the model is overfitted model [it implies model is performing well on train data nd bad on test data]
+
+                    data
+                    /  \
+               train    test
+        - accuracy high      - accuracy low
+        => low bias or       => high variance or high testing error
+            low traning error
+
+ in y = mx + c 
+if the m(slope)is very very high it means the model memorized the data points
+
+we want our model to have good accuracy but if it has 100% accuracy then it is overfitted
+so we introduce some error / penalize while training the model itself.
+Why you need it
+
+Without regularization:
+model fits training data perfectly
+fails on new data ❌
+
+With regularization:
+slightly worse training accuracy
+much better test accuracy ✅

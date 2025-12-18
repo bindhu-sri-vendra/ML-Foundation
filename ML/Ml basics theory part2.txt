@@ -1,0 +1,58 @@
+                            data-100%
+                           /    \
+                train data-80%   test data-20% (this is the data the model will never see and used for testing purpose)
+                     /   \
+            train-60%  validate-20%
+_____________________________________________________
+
+Model Training
+    - In the given data estimate the prediction by minimizing the error
+
+Model Overfitting
+    - So here basically when the model is trained the accuracy will be high but when it tested on test data the accuracy will be low and that is called overfitting
+    - Basically model performs well on train data and worst on test data
+
+Model Underfitting
+    -Here the model performs bad on both train and test data
+
+Generalized Model
+    -Accuracy will be high on both train and test data
+
+Training Error is also known as bias. higher the training error higher the bias
+Testing Error is also known as variance. higher the testing error higher the variance
+
+_____________________________________________________________________________
+Missing data 
+    reasons
+        -human error 
+        -data corruption
+-------------------------------------------------------
+a) missing completely at random:
+    -the missing data is independent of the observed and unobserved data/other missing data.
+eg: patient is suffering from a particular disease or not
+patient | suffering
+a1       | yes
+a2       | no
+a3       | yes
+a4       | -
+a5       | yes
+a6       | -
+from the above data the missing values are not dependent on other missing values as well as other present values of the same col
+--------------------------------------------------------
+b) missing at random
+    -the missing data is dependent on observed data and not on unobserved data
+--------------------------------------------------------
+c)missing data not at random
+    -the missing data will depend on the other missing values from the same column
+________________________________________________________________________________________
+
+Missing value treatment >>> should be asked from the business team ... not industry specified 
+why? .... for data analysis and ML prediction it is important to handle missing values
+
+1. If the dataset is huge and the missing values are <= 1% of the total data then we can just ignore them
+2. replace the missing values with mean/median/mode 
+    -if data is categorical replace with mode
+    -if data is continous replace with mean/median
+        -outlier treatment done ... replace with mean else median
+3. if any of the col has missing values >= 40% then drop that column
+4. replace the missing values with random values/ values that wont be possible to occur within that col (marks as -1)

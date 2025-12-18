@@ -1,0 +1,41 @@
+Correlation 
+
+lets say we have x[independent var] and y [ target var ] and correlation is 0.95
+=> if 1 unit of x increases then there is a 95% chance that y also increases.
+
+lets say we have x[independent var] and y [ target var ] and correlation is -0.95
+=> if 1 unit of x increases then there is a 95% chance that y decreases.
+___________________________________________________________________________________
+There is a chance that correlation exist between 2 independent variables [x1,x2] or multiple independent variables [x1,x2,x3,......xn]
+// to get correlation between two var's
+corr(x1,x2)
+______________________________________________________________________________________________________________________________________
+>> if there is a high correlation between x and y we can say that the model is good 
+What is the problem when there is high correlation among the independent variables themselvses?
+corr(x1,x2)=0.95 => if x1 increases there is a 95% chance that x2 also increases => x1~x2 
+y=10x1 + 2x2 
+since x1 and x2 are equal we cant say what impacts the y more between x1 and x2 -- thats the issue.
+______________________________________________________________________________________________________
+
+How to measure correlation between multiple variables -- Multicollinearity
+
+collinearity >> When 2 features are linearly associated (high correlation) and they are used to predict the target variable 
+_____________________________________________
+Why multicollinearity is a concern ?
+- it effects interpretation ( cant say x1 or x2 correlates more with y)
+- increases computation ( since x1 and x2 have same distribution)
+- increases overfiting
+
+Sol 
+VIF ( variation inflation factor )
+we calculate VIF and drop features one by one with high inflation
+If VIF >10 then high multicollinearity then we drop features one by one until all the features has VIF <10
+
+VIF = 1/(1- Rsq)
+we calculate VIF for independent variables
+lets keep x1 as y and x2x3x4 as x then build a model and find r square 
+lets assume VIF val came as 0.90
+=> x2 and x3 and x4 explanis 90 % of x1 and we can remove x1 thats how we drop features one by one [ take permission from buisness team ]
+
+RFE ( recursive feature elimination )
+

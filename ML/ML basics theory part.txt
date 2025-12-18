@@ -1,0 +1,67 @@
+ML >> learns the patterns from data and tries to mimic them for future data 
+EG: classifying an email spam or not
+
+AI >> describes how computer and technology mimics human intelligence.
+=>smart applications that perform tasks without human intervention
+EG: self driving cars
+
+note: ML is a subset of AI which main tasks is to learn patterns from data and make predictions.
+
+DL >> is a subset of ML which contains algorithms that mimic human brain
+EG: recommendation system/chatgpt
+___________________________________________________________________________________________________________________________________________________
+Types of ML styles
+----------------------------
+1.supervised learning 
+2.unsupervised learning
+3.semi supervised learning
+4.reinforcement learning
+----------------------------
+1.supervised learning : y=f(x)
+    whenever there is a dependent variable we can say it comes under supervised learning 
+eg:
+    area |  no of rooms  | price of the house(cr) ---> dependent variable(y)/target/outcome/labelled data
+    1200 |  2            | 3 
+    1400 |  4            | 5
+    1300 |  3            | ?--> this will be predicted by the ML model  
+we can predict the house rate based on area and no of rooms so house rate is dependent variable and area,no of rooms are independent variables / historic data(x)
+
+supervised learning is of 2 types
+a) Regression
+    - here y is continous (any value on the number line)
+      eg: price of the house (can be 3cr /3.5cr /3.76 cr)
+b) Classification
+    -here y is discrete (only the integers)
+     eg: pass/fail 
+    -If classification only takes 2 values then its called binary classification and over 3 values then multiclass classification.
+---------------------------------------------------------------------------------------------------------------------------------
+2. unsupervised learning:
+    - here there is no historic data (dependent / independent variables)
+    - here we try to find similar groups in the data
+eg: expenditure | salary(in lakhs)
+    300000      | 35
+    350000      | 37
+    400000      | 45
+    600000      | 55
+here we try to find a pattern in the data 
+-----------------------------------------------------------------------------------------------------------------------------------
+3.semi supervised learning
+    -Its a combination of both supervised and unsupervised learning
+    -It contains both labelled and unlabelled data
+eg: consider any OTT 
+
+netflix 
+ first they will categorize customers into groups based on regions (unsupervised learning)
+ second they will recommend any movies /shows based on the region (supervised learning)
+------------------------------------------------------------------------------------------------------------------------------------
+4. Reinforcement learning
+    - It is concerned with how intelligent agents take action in an environment to maximize the award
+
+Eg: lets say we want to train our dog to move from point A to point B 
+
+A __ biscuit ----------| biscuit -------------B
+| \
+
+here dog is the agent and the ground for A to B is our environment 
+dog goes towards the biscuit which is a reward signal and all other ways have negative signal so by using reward signal A reaches B
+__________________________________________________________________________________________________________________________________________________________

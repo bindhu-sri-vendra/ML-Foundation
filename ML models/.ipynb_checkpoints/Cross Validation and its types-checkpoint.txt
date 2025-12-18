@@ -1,0 +1,69 @@
+cross validation is testing our data more than once on different data splits
+
+Validation data is used to test the model while training itself
+
+Why?
+-One split can be lucky or unlucky.
+-Cross-validation gives a more reliable score.
+
+Basic idea
+
+1. Split data into parts
+2. Train on some parts
+3. Test on the remaining part
+4. Repeat
+5. Average the results
+If the model performs well everywhere → you can trust it.
+
+Types
+1️⃣ Leave-One-Out (LOOCV)
+    -Each sample becomes test once
+    -Train N times for N samples
+
+✔ Very accurate estimate
+❌ Extremely slow
+❌ Rarely used in practice
+
+2️⃣ K-Fold Cross Validation (most common)
+
+    Split data into K equal parts
+    Train on K−1 parts
+    Test on 1 part
+    Repeat K times
+
+Example: 5-fold
+
+Train 5 times
+
+Each time, a different test set
+
+✔ Stable
+✔ Standard choice
+
+3️⃣ Stratified K-Fold (for classification)
+
+Same as K-Fold, but:
+Keeps class proportions the same in every fold
+Use when:
+
+classes are imbalanced (very common)
+
+________________________________________________________________
+Hyperparameters = settings you choose before training.
+
+They are not learned from data — you decide them.
+
+
+Pipeline (real ML workflow)
+
+Choose model
+
+Choose hyperparameters
+
+Use cross-validation to evaluate
+
+Pick best hyperparameters
+
+Train final model on full training data
+
+Test once on test data
