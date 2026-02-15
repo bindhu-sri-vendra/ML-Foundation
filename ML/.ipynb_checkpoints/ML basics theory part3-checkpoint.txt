@@ -8,7 +8,7 @@ d      | 0
 e      | 1
 f      | 0
 here 0 means not diabetic and 1 means diabetic
-if 90% of the data of target var is 0 and other 10% is 1 and it gives 90% accuracy even if dont use any ML model and thats a problem called class imbalace.
+if 90% of the data of target var is 0 and other 10% is 1 and it gives 90% accuracy even if dont use any ML model and thats a problem called class imbalance.
 ___________________________________________________________________________________________________________________
 class imbalance:
     - one class has higher percentage compared to other class
